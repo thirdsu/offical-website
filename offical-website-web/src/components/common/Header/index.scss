@@ -1,0 +1,92 @@
+@import '../../../assets/css/common.scss';
+
+.menu {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  @include displayflex(row, center, center);
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+
+  .menu-container {
+    width: 960px;
+    @include displayflex(row, space-between, center);
+  }
+
+  .menu-list {
+    @include displayflex(row, flex-start, center);
+
+    .logo {
+      margin-right: 30px;
+
+      .logo-text {
+        font-size: 34px;
+        margin: 0;
+        color: #007fff;
+        cursor: pointer;
+      }
+    }
+
+    .menu-item {
+      color:#71777c;
+      font-size: 16px;
+      width: 70px;
+      height: 60px;
+      @include displayflex(row, center, center);
+
+      &:hover {
+        color: #007fff;
+        cursor: pointer;
+      }
+    }
+
+    .checked {
+      color: #007fff;
+    }
+  }
+
+  .menu-right {
+    font-size: 16px;
+    color: #007fff;
+    cursor: pointer;
+    @include displayflex(row, flex-start, center);
+
+    .login-text, .register-text {
+      margin: 0;
+    }
+    .login-text, .dot-text  {
+      margin-right: 6px;
+    }
+    .register-text {
+      margin-right: 20px;
+    }
+  }
+
+  .menu-user {
+    cursor: pointer;
+    @include displayflex(row, flex-start, center);
+    .mes-icon {
+      color: #71777c;
+      font-size: 24px;
+    }
+    .mes-icon:hover {
+      color:#007fff;
+    }
+    .user-img-div {
+      margin-left: 30px;
+      background-image: url("https://user-gold-cdn.xitu.io/2020/2/12/1703817c1dea6fa4?imageView2/1/w/100/h/100/q/85/format/webp/interlace/1");
+      width:30px;
+      height:30px;
+      border-radius: 50%;
+      // border: 1px solid #71777c;
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #eee;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import '../../assets/css/common.scss';
+
+.homePage {
+      @include displayflex(row, space-between, flex-start);
+      width: 960px;
+      margin-top: 72px;
+
+      .article-container {
+        background-color: #ffffff;
+        width: 680px;
+        padding-left: 15px;
+        @include displayflex(row, flex-start, flex-start);
+
+        .article-list {
+
+          .article-item {
+            margin-bottom: 35px;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:hover .title-part .title-notice {
+              opacity: 1;
+            }
+
+            .item-top {
+              @include displayflex(row, flex-start, center);
+
+              .item-label {
+                font-size: 10px;
+                font-weight: bold;
+              }
+
+              .label-primary {
+                color: #389ef2;
+              }
+
+              .label-new {
+                color: #ff0068;
+              }
+
+              .item-date {
+                margin-left: 10px;
+                font-size: 10px;
+                color: #b2bac2;
+              }
+            }
+
+            .title-part {
+              @include displayflex(row, flex-start, center);
+
+              .item-iitle {
+                color: #333333;
+                font-size: 16px;
+                margin: 0;
+                margin-right: 30px;
+                font-weight: bold;
+              }
+
+              .title-notice {
+                opacity: 0;
+                color: #007fff;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0;
+              }
+            }
+
+
+            .item-desc {
+              color: #777777;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .content-right {
+        @include displayflex(row, space-between, center);
+
+        .custom-div {
+          .label-list {
+            @include displayflex(row, flex-start, flex-start);
+            flex-wrap: wrap;
+            width: 225px;
+            height: auto;
+            background-color: #ffffff;
+            padding: 40px 10px 50px 10px;
+
+            .label-item {
+              @include displayflex(row, flex-start, center);
+              padding: 10px 20px;
+              margin: 10px;
+              color: #ffffff;
+              font-size: 14px;
+              background-color: rgba($color: #007fff, $alpha: 0.7);
+              border-radius: 5px;
+
+              &:hover {
+                cursor: pointer;
+                background-color: rgba($color: #007fff, $alpha: 0.9);
+              }
+            }
+          }
+        }
+      }
+}
